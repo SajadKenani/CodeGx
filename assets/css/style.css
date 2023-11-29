@@ -416,6 +416,9 @@ h6 {
   font-size: 17px;
 }
 
+#hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
 
 .leftImageEffect{
   width: 246px; 
