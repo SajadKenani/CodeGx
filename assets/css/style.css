@@ -5,6 +5,10 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+@font-face {
+  font-family: Noor;
+  src: url("/assets/Noor\ Regular/Noor\ Regular.ttf");
+}
 
 /*--------------------------------------------------------------
 # General
@@ -14,6 +18,10 @@ body {
   color: #444444;
   font-weight: 600;
   background-color: #F9FCFF;
+  overflow-x: hidden;
+
+
+
 }
 
 a {
@@ -89,6 +97,7 @@ h6 {
   transition: all 0.5s;
   padding: 22px 0;
   background: #fff;
+  width: 100%;
 }
 
 #header.header-scrolled {
@@ -376,18 +385,6 @@ h6 {
   font-size: 24px;
 }
 
-#hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 30px;
-  border-radius: 50px;
-  transition: 0.5s;
-  color: #3498db;
-  border: 2px solid #3498db;
-}
 
 .hero-font{
   font-family: "Noor";
@@ -418,11 +415,7 @@ h6 {
   direction: rtl;
   font-size: 17px;
 }
-.hero-button{
-  font-family: "Noor";
-  font-weight: 600;
- 
-}
+
 
 .leftImageEffect{
   width: 246px; 
@@ -443,21 +436,20 @@ h6 {
 
 .myHeroSection{
   background: rgb(240,249,255);
-  background: linear-gradient(90deg, rgb(245, 251, 255) 7%, #ffffff 100%);
+  background: linear-gradient(90deg, rgb(245, 251, 255) 1%, #ffffff 50%);
 
   padding-top: 160px;
 
 
 }
 
-#hero .btn-get-started:hover {
-  background: #3498db;
-  color: #fff;
+.phoneImage{
+  margin-top: 100px; 
+  width: 383px; 
+  height: 479.33px;
 }
 
-#hero .animated {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
-}
+
 
 @media (min-width: 1024px) {
   #hero {
@@ -467,7 +459,7 @@ h6 {
 
 @media (max-width: 991px) {
   #hero {
-    height: 100vh;
+    height: 140vh;
   }
 
   #hero .animated {
@@ -480,7 +472,7 @@ h6 {
 
   #hero .Phone-Image img {
     width: 50%;
-    margin-bottom: 160px;
+    margin-bottom: 450px;
   }
 
   .myMainFont{
@@ -491,11 +483,14 @@ h6 {
   
   
   }
+
+
 }
 
 @media (max-width: 768px) {
   #hero {
     margin-top: 20px;
+
   }
 
   #hero h1 {
@@ -515,19 +510,42 @@ h6 {
 }
 
 @media (max-width: 575px) {
+
+  #hero {
+    height: 170vh;
+  }
+
   #hero .Phone-Image img {
     width: 80%;
+
   }
   .myMainFont{
 
-    margin-top: 260px;
-  
+    margin-top: 460px;
 
-  
-  
   }
 
+  .myHeroSection{
+    width: 100%;
+
+    
+  }
+
+  .phoneImage{
+    max-width: 250px;
+    max-height: 400px;
+    
+  }
+
+  .leftImageEffect{
+    display: hidden;
+  }
+  
+  .rightImageEffect{
+    display: hidden;
+  }
 }
+
 
 @keyframes up-down {
   0% {
@@ -546,8 +564,10 @@ section {
   padding: 60px 0;
   overflow: hidden;
 
+
   
 }
+
 
 .section-bg {
   background-color: #f7fbfe;
@@ -592,7 +612,12 @@ section {
 --------------------------------------------------------------*/
 .about{
   background-color: white;
+  
+  width: 100%;
+
+
 }
+
 
 .about .content h3 {
   font-weight: 600;
@@ -669,16 +694,95 @@ section {
   border: 2px solid #3498db;
 }
 
+.firstFont{
+  width: 60px; 
+  color: #3498DB; 
+  text-align: center; 
+  margin-top: 75px;
+}
+
+.secondFont{
+  width: 70px; 
+  color: #3498DB; 
+  text-align: center; 
+  margin-top: 110px;
+}
+
+.thirdFont{
+  width: 100px; 
+  color: white; 
+  text-align: center; 
+  margin-top: 80px;
+}
+
+
+
 .about .content .btn-learn-more:hover {
   background: #3498db;
   color: #fff;
   text-decoration: none;
 }
 
-.myImageIcon:hover{
-  color: blue;
-  background-color: #18d26e;
+
+@media screen and (max-width: 768px) {
+  .firstCircle{
+    width: 200px;
+    height: 200px;
+  }
+  .secondCircle{
+    width: 200px;
+    height: 200px;
+
+    margin-top: 30px;
+  }
+  .thirdCircle{
+    width: 200px;
+    height: 200px;
+
+    margin-left: 40px;
+  }
+
+  .secondFont{
+    margin-top: 75px;
+  }
 }
+
+@media screen and (max-width: 428px) {
+  .firstCircle{
+    width: 140px;
+    height: 140px;
+
+    margin-top: 100px;
+  }
+  .secondCircle{
+    width: 140px;
+    height: 140px;
+
+    margin-top: 60px;
+
+   
+  }
+  .thirdCircle{
+    width: 160px;
+    height: 160px;
+
+    margin-left: 120px;
+  }
+
+  .firstFont{
+    margin-top: 45px;
+  }
+  .secondFont{
+    margin-top: 50px;
+  }
+  .thirdFont{
+    margin-top: 55px;
+  }
+
+}
+
+
+
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
@@ -764,38 +868,20 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
 .services .icon-box {
   padding: 30px;
   position: relative;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
-  transition: all 0.3s ease-in-out;
+
+
   border-radius: 8px;
   z-index: 1;
 }
 
-.services .icon-box::before {
-  content: "";
-  position: absolute;
-  background: #e1f0fa;
-  right: -60px;
-  top: -40px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  transition: all 0.3s;
-  z-index: -1;
-}
 
-.services .icon-box:hover::before {
-  background: #3498db;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0px;
-}
 
 .services .icon {
   margin: 0 auto 20px auto;
@@ -806,7 +892,7 @@ section {
   width: 60px;
   height: 60px;
   background: #3498db;
-  transition: all 0.3s ease-in-out;
+
 }
 
 .services .icon i {
@@ -853,77 +939,13 @@ section {
 
 .myBox{
   width: 300px; 
-  height: 300px; 
+  height: fit-content; 
   background-color: white; 
   padding: 30px;
 
 
 
 
-}
-
-/*--------------------------------------------------------------
-# More Services
---------------------------------------------------------------*/
-.more-services {
-  padding-top: 20px;
-}
-
-.more-services .card {
-  border: 0;
-  padding: 160px 20px 20px 20px;
-  position: relative;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.more-services .card-body {
-  z-index: 10;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 15px 30px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-  transition: ease-in-out 0.4s;
-  border-radius: 5px;
-}
-
-.more-services .card-title {
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.more-services .card-title a {
-  color: #222222;
-}
-
-.more-services .card-text {
-  color: #5e5e5e;
-}
-
-.more-services .read-more a {
-  color: #777777;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px;
-  transition: 0.4s;
-}
-
-.more-services .read-more a:hover {
-  text-decoration: underline;
-}
-
-.more-services .card:hover .card-body {
-  background: #3498db;
-}
-
-.more-services .card:hover .read-more a,
-.more-services .card:hover .card-title,
-.more-services .card:hover .card-title a,
-.more-services .card:hover .card-text {
-  color: #fff;
 }
 
 
@@ -933,6 +955,9 @@ section {
 
 .portfolio {
   background-color: white;
+
+
+  
 }
 
 .portfolio .portfolio-item {
@@ -1071,78 +1096,17 @@ section {
   color: white;
   background-color: #3498DB;
 
-  font-weight: 400;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 17px;
+
+  font-family: "Noor";
 
   line-height: 24px;
 
 
 
 }
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-}
 
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #3498db;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #3498db;
-}
-
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(34, 34, 34, 0.08);
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li+li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
-}
 
 
 /*--------------------------------------------------------------
@@ -1150,6 +1114,7 @@ section {
 --------------------------------------------------------------*/
 .contact {
   background-color: white;
+
 
 }
 
@@ -1306,67 +1271,6 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
-.breadcrumbs {
-  padding: 15px 0;
-  background: #ffffff;
-  min-height: 40px;
-  margin-top: 86px;
-}
-
-@media (max-width: 992px) {
-  .breadcrumbs {
-    margin-top: 72px;
-  }
-}
-
-.breadcrumbs h2 {
-  font-size: 28px;
-  font-weight: 400;
-  margin: 0;
-}
-
-.breadcrumbs ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-}
-
-@media (max-width: 992px) {
-  .breadcrumbs ol {
-    margin-top: 10px;
-  }
-}
-
-.breadcrumbs ol li+li {
-  padding-left: 10px;
-}
-
-.breadcrumbs ol li+li::before {
-  display: inline-block;
-  padding-right: 10px;
-  color: #3c3c3c;
-  content: "/";
-}
-
-@media (max-width: 768px) {
-  .breadcrumbs .d-flex {
-    display: block !important;
-  }
-
-  .breadcrumbs ol {
-    display: block;
-  }
-
-  .breadcrumbs ol li {
-    display: inline-block;
-  }
-}
 
 /*--------------------------------------------------------------
 # Footer
